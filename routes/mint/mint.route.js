@@ -6,7 +6,7 @@ const smtpTransport = require("nodemailer-smtp-transport");
 router.post("/mail", async (req, res) => {
   const { email, context } = req.body;
 
-  const output = `${context}`;
+  const output = `${email}-${context}`;
 
   var transport = nodemailer.createTransport(
     smtpTransport({
