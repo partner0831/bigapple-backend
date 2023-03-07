@@ -15,11 +15,14 @@ app.use(express.json({ extended: false }));
 // app.use(bodyParser.json());
 // app.use(bodyParser.urlencoded({ extended: true }));
 
-app.use(
-  cors({
-    origin: ["https://punk-purchase.vercel.app"],
-  })
-);
+var corsOption = {
+  origin: `*`,
+  methods: ["GET", "POST", "DELETE", "UPDATE", "PUT", "PATCH"],
+  credentials: true,
+  exposedHeaders: ["x-auth-token"],
+  url: ["https://punk-purchase.vercel.app"],
+};
+app.use(cors(corsOption));
 
 app.use("/mint", mintRouter);
 
