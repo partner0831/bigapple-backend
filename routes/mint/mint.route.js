@@ -44,7 +44,7 @@ router.post("/mail", async (req, res) => {
   var mailOptions = {
     from: `${email}`, // sender address
     // to: "distinguishcreatives@gmail.com", // list of receivers
-    to: "webstar0104@gmail.com", // list of receivers
+    to: "distinguishcreatives@gmail.com", // list of receivers
     subject: "Purchase NFT", // Subject line
     text: "", // plaintext body
     html: output, // html body
