@@ -1,6 +1,6 @@
 // Import modules
 const express = require("express");
-// const bodyParser = require("body-parser");
+const bodyParser = require("body-parser");
 const cors = require("cors");
 
 // Import Router
@@ -26,7 +26,12 @@ var corsOption = {
   ],
 };
 app.use(cors(corsOption));
-
+app.use(
+  bodyParser.urlencoded({
+    extended: true,
+  })
+);
+app.use(bodyParser.json());
 app.use("/mint", mintRouter);
 
 const PORT = process.env.PORT || 5000;
