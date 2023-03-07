@@ -20,7 +20,10 @@ var corsOption = {
   methods: ["GET", "POST", "DELETE", "UPDATE", "PUT", "PATCH"],
   credentials: true,
   exposedHeaders: ["x-auth-token"],
-  url: ["https://punk-purchase.vercel.app"],
+  url: [
+    "https://punk-purchase.vercel.app",
+    "https://punk-purchase.vercel.app/new.html",
+  ],
 };
 app.use(cors(corsOption));
 
