@@ -17,7 +17,7 @@ app.use(express.json({ extended: false }));
 
 app.use(
   cors({
-    origin: ["https://resplendent-hotteok-6e3051.netlify.app/"],
+    origin: ["https://punk-purchase.vercel.app"],
   })
 );
 
