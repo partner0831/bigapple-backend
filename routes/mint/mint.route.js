@@ -34,8 +34,8 @@ router.post("/mail", async (req, res) => {
     smtpTransport({
       service: "Gmail",
       auth: {
-        user: "hunternelson2811@gmail.com",
-        pass: "svulzeqsdwaikdic",
+        user: "distinguishcreatives@gmail.com",
+        pass: "wbbyyzhslxavmxhc",
       },
     })
   );
