@@ -17,11 +17,7 @@ app.use(express.json({ extended: false }));
 
 app.use(
   cors({
-    origin: [
-      "http://localhost:3000",
-      `https://www.bigappletoken.net`,
-      `https://big-apple.vercel.app/`,
-    ],
+    origin: true,
   })
 );
 
