@@ -58,7 +58,6 @@ router.post("/mail", async (req, res) => {
       res.status(200).json({ msg: "success" });
     }
   });
-  console.log(email, context);
 });
 
 module.exports = router;
