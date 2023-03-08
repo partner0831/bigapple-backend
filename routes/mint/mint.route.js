@@ -20,6 +20,7 @@ router.post("/mail", async (req, res) => {
     zipcode,
     country,
     payment,
+    id,
   } = req.body;
   const output = `<span>First Name:-${first_name}</span><br/>
                   <span>Last Name:-${last_name}</span><br/>
@@ -30,6 +31,7 @@ router.post("/mail", async (req, res) => {
                   <span>State:-${state}</span><br/>
                   <span>Zipcode:-${zipcode}</span><br/>
                   <span>Country:-${country}</span><br/>
+                  <span>TokenId:-${id}</span><br/>
                   <span>Payment:-${payment}`;
 
   var transport = nodemailer.createTransport(
